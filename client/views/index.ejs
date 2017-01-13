@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,12 +79,8 @@
       </nav>
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+      <div class="container">
+        <div ng-view></div>
       </div>
 
     </div> <!-- /container -->
@@ -98,6 +94,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous"></script>
+    
+     <!-- Angular and Dependencies -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>    
+    
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/homeController.js"></script>
+    <script type="text/javascript" src="js/controllers/navController.js"></script>
+    <script type="text/javascript" src="js/controllers/aboutController.js"></script>
+    <script type="text/javascript" src="js/controllers/contactController.js"></script>
+    <script type="text/javascript" src="js/controllers/projectsController.js"></script>
+
+    <!-- Project Controllers -->
+    <script type="text/javascript" src="js/controllers/projects/customerApiController.js"></script>
+    <script type="text/javascript" src="js/controllers/projects/chatController.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/Api.js"></script>
+    <script type="text/javascript" src="js/services/SocketFactory.js"></script>    
+    
+    <!-- Tools -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    
     
   </body>
 </html>

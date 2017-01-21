@@ -26,6 +26,10 @@ app.set('views', path.resolve(__dirname, 'client', 'views'));
 
 app.use(express.static(path.resolve(__dirname, 'client')));
 
+var api = express.Router();
+require('./server/routes/api')(api);
+app.use('/api', api);
+
 //set our first route
 app.get('*', function(req, res){
     res.render('index.ejs');

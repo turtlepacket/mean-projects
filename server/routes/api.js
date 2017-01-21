@@ -1,7 +1,7 @@
 var Customer = require('../models/customer');
 
 module.exports = function(router){
-    router.post('/customer', function(req, res){
+    router.post('/customers', function(req, res){
         console.log(req.body);
         var customer = new Customer();
         customer.firstname = req.body.firstname;
